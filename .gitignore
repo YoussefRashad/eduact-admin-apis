@@ -1,0 +1,15 @@
+node_modules
+build
+coverage
+.vscode
+.DS_STORE
+.env
+.env.*
+tmp
+
+# webstorm
+.idea
+
+# automated testing
+test
+japaFile.ts

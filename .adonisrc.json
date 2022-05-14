@@ -1,0 +1,49 @@
+{
+  "typescript": true,
+  "commands": [
+    "./commands",
+    "@adonisjs/core/build/commands",
+    "@adonisjs/repl/build/commands",
+    "@adonisjs/lucid/build/commands",
+    "adonis5-scheduler/build/commands",
+    "pretty-list-routes/build/commands/PrettyRoute.js"
+  ],
+  "exceptionHandlerNamespace": "App/Exceptions/Handler",
+  "aliases": {
+    "App": "app",
+    "Config": "config",
+    "Database": "database",
+    "Contracts": "contracts"
+  },
+  "preloads": [
+    "./start/routes",
+    "./start/kernel",
+    {
+      "file": "./start/events",
+      "environment": [
+        "web"
+      ]
+    }
+  ],
+  "providers": [
+    "./providers/AppProvider",
+    "@adonisjs/core",
+    "@adonisjs/lucid",
+    "adonis5-scheduler",
+    "@adonisjs/drive-s3",
+    "adonisjs-select-related"
+  ],
+  "aceProviders": [
+    "@adonisjs/repl"
+  ],
+  "metaFiles": [
+    {
+      "pattern": ".npmrc",
+      "reloadServer": false
+    },
+    {
+      "pattern": "email.config.js",
+      "reloadServer": false
+    }
+  ]
+}

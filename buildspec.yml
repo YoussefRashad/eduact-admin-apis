@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  build:
+    commands:
+      - npm i
+      - npm i reflect-metadata
+      - npm run build
+artifacts:
+  type: zip
+  base-directory: build
+  files:
+    - '**/*'
